@@ -1,7 +1,5 @@
 package PGL.pglp_3_2;
 
-import java.util.Calendar;
-
 public class Vendeur extends Employe{
 	private double commission;
 
@@ -19,9 +17,7 @@ public class Vendeur extends Employe{
 	}
 
 	public double calculSalaire() {
-		Calendar c = Calendar.getInstance();
-		int annee_cour = c.get(Calendar.YEAR);
-		return 1500+20*(annee_cour-getAnnee_arriv());
+		return super.calculSalaire()+commission;
 	}
 
 }

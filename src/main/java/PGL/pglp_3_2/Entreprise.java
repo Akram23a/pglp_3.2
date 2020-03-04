@@ -4,35 +4,25 @@ import java.util.ArrayList;
 
 public class Entreprise {
 	
-	private ArrayList<Vendeur> listeVen;
-	private ArrayList<Manager> listeMan;
+	private ArrayList<Employe> listeEmp;
 
 	
 	public Entreprise() {
-		listeVen = new ArrayList<Vendeur>();
-		listeMan = new ArrayList<Manager>();
+		listeEmp = new ArrayList<Employe>();
 
 	}
 	
-	public void ajoutVendeur(Vendeur E) {
-		this.listeVen.add(E);
+	public void ajoutEmploye(Employe E) {
+		this.listeEmp.add(E);
 	}
-	public void ajoutManager(Manager E) {
-		this.listeMan.add(E);
-	}
-	
+
 	public double calculSommeSalaires() {
 		double S;
 		S=0;
 		
-		for(Vendeur V: listeVen) {
+		for(Employe V: listeEmp) {
 			S= S+V.calculSalaire();
 		}
-		
-		for(Manager F: listeMan) {
-			S= S+F.calculSalaire();
-		}
-		
 		
 		return S;
 	}
