@@ -10,11 +10,7 @@ public class Employe {
 		this.setAnnee_arrivee(annee);
 	}
 	
-	public double calculSalaire() {
-		Calendar c = Calendar.getInstance();
-		int annee_cour = c.get(Calendar.YEAR);
-		return 1500+20*(annee_cour-annee_arriv);
-	}
+
 
 	public String getNom() {
 		return nom;
