@@ -9,13 +9,13 @@ public class App
     public static void main( String[] args )
     {
         Entreprise A=new Entreprise();
-        Vendeur C=new Vendeur("one",2015,100);
-        Manager D=new Manager("two",2014,3);
+        Vendeur C=new Vendeur("one",2016,100);
+        Manager D=new Manager("two",2016,3);
         
         A.ajoutEmploye(D);
         A.ajoutEmploye(C);
 
-        System.out.println(A.calculSommeSalaires());
+        System.out.println(D.calculSalaire());
         
         
 
