@@ -1,4 +1,5 @@
 package PGL.pglp_3_2;
+import java.util.Calendar;
 
 public class Employe {
 	private  String nom;
@@ -10,7 +11,9 @@ public class Employe {
 	}
 	
 	public double calculSalaire() {
-		return 500;
+		Calendar c = Calendar.getInstance();
+		int annee_cour = c.get(Calendar.YEAR);
+		return 1500+20*(annee_cour-annee_arriv);
 	}
 
 	public String getNom() {
