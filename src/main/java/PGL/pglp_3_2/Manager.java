@@ -1,28 +1,40 @@
 package PGL.pglp_3_2;
-
+/**
+ * @author Akram
+ */
 public class Manager extends Employe{
-
+	/**
+	 */
 	private int nbEmployesSousOrdre;
-	
-	
-	public Manager(String nom, int annee, int nbEmployesSousOrdre) {
+	/**
+	 * @param nom
+	 * @param annee
+	 * @param nbEmployesSousOrdre
+	 */
+	public Manager(String nom, int annee, int nbEmployesSousOrdre1) {
 		super(nom, annee);
-		this.setNbEmployesSousOrdre(nbEmployesSousOrdre);
+		this.setNbEmployesSousOrdre(nbEmployesSousOrdre1);
 	}
-	
-	public void incrNbSO(){
+	/**
+	 */
+	public void incrNbSO() {
 		nbEmployesSousOrdre++;	
 	}
-	
-	public int getNbEmployesSousOrdre() {
+	/**
+	 * @return  Managed Employees
+	 */
+	final public int getNbEmployesSousOrdre() {
 		return nbEmployesSousOrdre;
 	}
-	
-	public void setNbEmployesSousOrdre(int nbEmployesSousOrdre) {
-		this.nbEmployesSousOrdre = nbEmployesSousOrdre;
+	/**
+	 * @param nbEmployesSousOrdre1   Managed Employees
+	 */
+	final public void setNbEmployesSousOrdre(final int nbEmployesSousOrdre1) {
+		this.nbEmployesSousOrdre = nbEmployesSousOrdre1;
 	}
-
-	public double calculSalaire() {		
-		return super.calculSalaire()+nbEmployesSousOrdre*100;
+	/**
+	 */
+	public double calculSalaire() {	
+		return super.calculSalaire() + nbEmployesSousOrdre * 100;
 	}
 }
